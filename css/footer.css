@@ -1,0 +1,127 @@
+/* footer.css: the footer, the same on every page */
+
+.footer {
+  margin-top: 3rem;
+  padding: 3.5rem 0 1.25rem;
+  background: var(--header-bg);
+  color: #fff;
+}
+.footer :focus-visible { outline-color: var(--saffron); }
+.footer a { color: #D5E2D9; text-decoration: none; }
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+/* ---- About column ---- */
+.footer-brand {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.75rem;
+  letter-spacing: -0.02em;
+}
+.footer-text { max-width: 20rem; margin: 0; color: #D5E2D9; }
+
+.social {
+  list-style: none;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  display: flex;
+  gap: 0.6rem;
+}
+.social a {
+  width: 2.75rem;
+  height: 2.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.social a:hover { color: var(--muted); background: var(--saffron); border-color: var(--saffron); }
+
+/* ---- Column titles and lists ---- */
+.footer-title {
+  margin: 0 0 1rem;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: #fff;
+}
+.footer-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.footer-list li { color: #D5E2D9; }
+.footer-list a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.5rem;
+  transition: color 0.15s ease;
+}
+.footer-list a:hover { color: var(--saffron); text-decoration: underline; }
+.contact li { padding: 0.3rem 0; }
+
+/* ---- Opening hours ---- */
+.hours { margin: 0; }
+.hours div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.45rem 0;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.25);
+}
+.hours dt { color: #D5E2D9; }
+.hours dd { margin: 0; font-weight: 600; text-align: right; }
+
+/* ---- Bottom bar ---- */
+.footer-bottom {
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  color: #9FB3A6;
+  font-size: 0.9rem;
+}
+.footer-bottom p { margin: 0; }
+.to-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: 2.5rem;
+  padding: 0 1rem;
+  font: inherit;
+  color: #fff;
+  background: transparent;
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.to-top:hover { color: var(--saffron); border-color: var(--saffron); }
+
+/* ---- Wider screens ---- */
+@media (min-width: 700px) {
+  .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 1000px) {
+  .footer-grid { grid-template-columns: 1.4fr 1fr 1.2fr 1.3fr; gap: 2rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .social a,
+  .footer-list a,
+  .to-top { transition: none; }
+}

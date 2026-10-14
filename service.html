@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore coffee, meals, and takeaway at Maya Cafe in Kombolcha.">
+  <title>Services-Maya Cafe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/page.css">
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Maya Cafe home"><span class="brand-name">Maya Cafe</span></a>
+      <button type="button" id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+      <div id="site-menu" class="site-menu">
+        <nav class="site-nav" aria-label="Main"><ul>
+          <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li><li><a href="maps.html">Maps</a></li>
+          <li><a href="gallary.html">Gallery</a></li><li><a href="service.html" aria-current="page">Services</a></li>
+        </ul></nav>
+        <div id="header-actions" class="header-actions"><a class="btn-outline" href="login.html">Login</a><a class="btn-solid" href="register.html">Sign up</a></div>
+      </div>
+    </div>
+  </header>
+  <main class="content">
+    <h1>Made for your kind of day</h1>
+    <p>Whether you are settling in or heading out, there is something good waiting at Maya Cafe.</p>
+    <div class="service-list">
+      <section><h2>Coffee and tea</h2><p>Enjoy traditional Ethiopian coffee, macchiato, cappuccino, spris, and spiced shai, prepared fresh to order.</p></section>
+      <section><h2>Breakfast and lunch</h2><p>Choose from comforting local favorites and satisfying everyday meals, with options for a quick bite or a longer visit.</p></section>
+      <section><h2>Fresh drinks and desserts</h2><p>Cool down with fresh juice, then finish your visit with a slice of cake, fruit, or a freshly baked cookie.</p></section>
+      <section><h2>Takeaway</h2><p>Short on time? Place your order at the counter and take your coffee or meal with you.</p></section>
+    </div>
+    <a class="btn btn-dark" href="index.html#menu">Browse today's menu</a>
+  </main>
+  <footer class="footer"><div class="container footer-bottom"><p>&copy; <span id="year"></span> Maya Cafe. All rights reserved.</p><button type="button" id="back-to-top" class="to-top">Back to top</button></div></footer>
+  <script src="js/nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registration - Maya Cafe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/page.css">
+</head>
+<body>
+
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Maya Cafe home"><span class="brand-name">Maya Cafe</span></a>
+      <button type="button" id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+      <div id="site-menu" class="site-menu">
+        <nav class="site-nav" aria-label="Main"><ul>
+          <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li><li><a href="maps.html">Maps</a></li>
+          <li><a href="gallary.html">Gallery</a></li><li><a href="service.html">Services</a></li>
+        </ul></nav>
+        <div id="header-actions" class="header-actions">
+          <a class="btn-outline" href="login.html">Login</a>
+          <a class="btn-solid" href="register.html" aria-current="page">Sign up</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="form-card">
+    <h1>Create an account</h1>
+
+    <form id="register-form" class="form">
+      <div class="field">
+        <label for="name">Full name</label>
+        <input id="name" type="text" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" type="email" autocomplete="email" required>
+      </div>
+      <div class="field">
+        <label for="password">Password (at least 6 characters)</label>
+        <input id="password" type="password" minlength="6" autocomplete="new-password" required>
+      </div>
+      <div class="field">
+        <label for="confirm">Confirm password</label>
+        <input id="confirm" type="password" autocomplete="new-password" required>
+      </div>
+
+      <p id="form-message" class="form-message" aria-live="polite"></p>
+      <button type="submit" class="btn">Register</button>
+    </form>
+
+    <!-- <p class="form-note">Demo only: accounts stay in this browser and passwords are not protected. Do not use a real password.</p> -->
+    <p class="form-note">Already have an account? <a href="login.html">Log in</a></p>
+  </main>
+
+  <footer class="footer"><div class="container footer-bottom"><p>&copy; <span id="year"></span> Maya Cafe. All rights reserved.</p><button type="button" id="back-to-top" class="to-top">Back to top</button></div></footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,324 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fikir Cafe</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="fikir.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maya Cafe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
 
-<header class="header">
-    <a href="#" class="logo">
-        <span class="logo-icon">☕</span>
-        <span class="logo-text">Fikir <span class="logo-accent">Cafe</span></span>
-    </a>
-    <nav class="navbar">
-        <a href="#home" class="active">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#menu">Menu</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#testimonial">Testimonials</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <button class="theme-toggle" id="themeToggle" title="Toggle Dark/Light Mode">
-        <span class="theme-icon">🌙</span>
-    </button>
-</header>
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
 
-<section class="home" id="home">
-    <div class="home-content">
-        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1400&q=80" alt="Fikir Cafe Interior">
-        <div class="home-overlay">
-            <h1>Welcome to Fikir Cafe</h1>
-            <p>A warm place for great food & coffee</p>
+      <a class="brand" href="index.html" aria-label="Maya Cafe home">
+        <span class="brand-name">Maya Cafe</span>
+      </a>
+
+      <button type="button" id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <div id="site-menu" class="site-menu">
+        <nav class="site-nav" aria-label="Main">
+          <ul>
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="maps.html">Maps</a></li>
+            <li><a href="gallary.html">Gallery</a></li>
+            <li><a href="service.html">Services</a></li>
+          </ul>
+        </nav>
+
+        <div id="header-actions" class="header-actions">
+          <a class="btn-outline" href="login.html">Login</a>
+          <a class="btn-solid" href="register.html">Sign up</a>
         </div>
-    </div>
-</section>
-
-<section class="about" id="about">
-    <div class="about-content">
-       <h1>About Us</h1>
-       <p>Fikir Cafe is a family-owned business that has<br>
-       been serving the community for over 10 years.<br>
-       Our mission is to provide high-quality food<br>
-       and beverages in a warm and welcoming environment.</p>
-    </div>
-</section>
-
-<section class="menu" id="menu">
-    <h1>Our Menu</h1>
-    <div class="cafe-menu">
-
-       <div class="menu-item">
-            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&q=80" alt="Coffee">
-            <div class="menu-info">
-                <h2>Coffee</h2>
-                <p>Rich and aromatic coffee blends</p>
-                <span class="price">$4.00</span>
-            </div>
-       </div>
-
-       <div class="menu-item">
-            <img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=400&q=80" alt="Juice">
-            <div class="menu-info">
-                <h2>Fresh Juice</h2>
-                <p>Made from fresh fruits daily</p>
-                <span class="price">$2.50</span>
-            </div>
-       </div>
-
-       <div class="menu-item">
-            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&q=80" alt="Special Food">
-            <div class="menu-info">
-                <h2>Special Food</h2>
-                <p>Our chef's special dishes</p>
-                <span class="price">$4.00</span>
-            </div>
-       </div>
-
-       <div class="menu-item">
-            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&q=80" alt="Pizza">
-            <div class="menu-info">
-                <h2>Pizza</h2>
-                <p>Freshly baked with premium toppings</p>
-                <span class="price">$7.00</span>
-            </div>
-       </div>
-
-       <div class="menu-item">
-            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=80" alt="Burger">
-            <div class="menu-info">
-                <h2>Burger</h2>
-                <p>Juicy burgers made to perfection</p>
-                <span class="price">$6.50</span>
-            </div>
-       </div>
-
-       <div class="menu-item">
-            <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=400&q=80" alt="Dessert">
-            <div class="menu-info">
-                <h2>Dessert</h2>
-                <p>Sweet treats to end your meal</p>
-                <span class="price">$3.00</span>
-            </div>
-       </div>
+      </div>
 
     </div>
+  </header>
 
-    <div class="menu-banners">
-        <div class="menu-item">
-            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&q=80" alt="Fine Dining">
-            <div class="menu-info">
-                <h2>Fine Dining Experience</h2>
-                <p>Every dish crafted with passion & love</p>
-                <span class="price">$12.00</span>
+  <main>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1 class="hero-title">Welcome to Maya Cafe</h1>
+          <p class="hero-text">Fresh coffee, good food and a warm place to sit. Look through today's menu, or come and visit us.</p>
+          <div class="hero-buttons">
+            <a class="btn btn-dark btn-lg" href="#menu">See the menu</a>
+            <a class="btn btn-line btn-lg" href="#visit">Visit us</a>
+          </div>
+        </div>
+
+        <svg class="hero-art" width="400" height="400" viewBox="0 0 420 420" role="img" aria-label="A coffee cup with steam">
+          <circle cx="210" cy="210" r="190" fill="#E8B31C"/>
+          <circle cx="338" cy="84" r="52" fill="#B3263A"/>
+          <circle cx="78" cy="338" r="38" fill="#4A554E"/>
+          <path d="M168 150c-14-16 14-30 0-50M210 150c-14-16 14-30 0-50M252 150c-14-16 14-30 0-50" fill="none" stroke="#4A554E" stroke-width="10" stroke-linecap="round"/>
+          <rect x="130" y="172" width="150" height="118" rx="26" fill="#4A554E"/>
+          <path d="M278 198h16a28 28 0 0 1 0 56h-16" fill="none" stroke="#4A554E" stroke-width="16" stroke-linecap="round"/>
+          <ellipse cx="205" cy="306" rx="110" ry="14" fill="#4A554E"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Menu -->
+    <section id="menu" class="section">
+      <div class="container">
+        <h2 class="section-title">Our menu</h2>
+        <p class="section-lead">Browse each menu list or search for an item. All prices are in ETB.</p>
+
+        <label class="search">
+          <span class="visually-hidden">Search the menu</span>
+          <input id="search" type="search" placeholder="Search the menu" autocomplete="off">
+        </label>
+
+        <!-- Shown when the search box is empty -->
+        <div id="categories-view">
+          <div id="menu-lists" class="menu-lists"></div>
+        </div>
+
+        <!-- Shown while the person is searching -->
+        <div id="results-view" hidden>
+          <h3 class="page-title">Search results</h3>
+          <div id="results" class="menu-cards"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What we offer (sample text: replace with your real services) -->
+    <section class="offer-band">
+      <div class="container">
+        <h2 class="section-title">What we offer</h2>
+
+        <div class="offers">
+          <div class="offer">
+            <div class="offer-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 9h11v5a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4V9zM16 10h1.5a2.5 2.5 0 0 1 0 5H16M8 3v3M12 3v3"/></svg>
             </div>
-        </div>
-        <div class="menu-item">
-            <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=400&q=80" alt="Fresh Ingredients">
-            <div class="menu-info">
-                <h2>Fresh Ingredients</h2>
-                <p>Sourced daily for the best taste</p>
-                <span class="price">$9.00</span>
+            <h3 class="offer-title">Fresh coffee</h3>
+            <p class="offer-text">Coffee and espresso drinks, made to order.</p>
+          </div>
+
+          <div class="offer">
+            <div class="offer-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3v7a2 2 0 0 0 2 2v9M10 3v7M8 3v7M17 3c-2 2-2 6 0 8v10"/></svg>
             </div>
-        </div>
-    </div>
+            <h3 class="offer-title">Breakfast and lunch</h3>
+            <p class="offer-text">Traditional and international dishes, served through the day.</p>
+          </div>
 
-</section>
-
-<section class="gallery" id="gallery">
-    <h1>Gallery</h1>
-    <p class="gallery-subtitle">A glimpse into our world of flavors & ambiance</p>
-    <div class="gallery-container">
-
-        <div class="gallery-item large">
-            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80" alt="Restaurant Atmosphere">
-            <div class="gallery-caption">Cozy Atmosphere</div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80" alt="Hot Coffee">
-            <div class="gallery-caption">Fresh Coffee</div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1546173159-315724a31696?w=600&q=80" alt="Fresh Juice">
-            <div class="gallery-caption">Fresh Juices</div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80" alt="Burger">
-            <div class="gallery-caption">Juicy Burgers</div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600&q=80" alt="Pizza">
-            <div class="gallery-caption">Wood-fired Pizza</div>
-        </div>
-
-        <div class="gallery-item large">
-            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80" alt="Fine Dining">
-            <div class="gallery-caption">Fine Dining Experience</div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" alt="Special Dish">
-            <div class="gallery-caption">Chef's Specials</div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=600&q=80" alt="Grilled Food">
-            <div class="gallery-caption">Grilled Delights</div>
-        </div>
-
-        <div class="gallery-item large">
-            <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=1400&q=80" alt="Restaurant Night View">
-            <div class="gallery-caption">Come & Enjoy the Night With Us</div>
-        </div>
-
-    </div>
-</section>
-
-<section class="testimonial" id="testimonial">
-    <h1>What Our Customers Say</h1>
-    <div class="testimonial-container">
-
-    <div class="box">
-        <p>"The best cafe in town! The coffee is always fresh and the staff are so friendly."<br><br>
-        <b>- John D.</b></p>
-    </div>
-    <div class="box">
-        <p>"I love coming here for lunch. The food is delicious and the atmosphere is so cozy."<br><br>
-        <b>- Sarah K.</b></p>
-    </div>
-    <div class="box">
-        <p>"Fikir Cafe is my go-to spot for a quick coffee break. Highly recommend!"<br><br>
-        <b>- Mike S.</b></p>
-    </div>
-    </div>
-</section>
-
-<section class="contact" id="contact">
-    <div class="contact-wrapper">
-
-        <div class="contact-info">
-            <h1>Get In Touch</h1>
-            <p class="contact-sub">We'd love to hear from you. Visit us or send a message!</p>
-
-            <div class="contact-detail">
-                <span class="contact-icon">📞</span>
-                <div>
-                    <strong>Phone</strong>
-                    <p>0987654321</p>
-                </div>
+          <div class="offer">
+            <div class="offer-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8zM9 8V6a3 3 0 0 1 6 0v2"/></svg>
             </div>
-
-            <div class="contact-detail">
-                <span class="contact-icon">✈️</span>
-                <div>
-                    <strong>Telegram</strong>
-                    <p>@FikirCafe</p>
-                </div>
-            </div>
-
-            <div class="contact-detail">
-                <span class="contact-icon">📍</span>
-                <div>
-                    <strong>Address</strong>
-                    <p>Kombolcha, Ethiopia</p>
-                </div>
-            </div>
-
-            <div class="contact-detail">
-                <span class="contact-icon">🕐</span>
-                <div>
-                    <strong>Opening Hours</strong>
-                    <p>Mon – Sun: 7:00 AM – 10:00 PM</p>
-                </div>
-            </div>
+            <h3 class="offer-title">Takeaway</h3>
+            <p class="offer-text">Order at the counter and take it with you.</p>
+          </div>
         </div>
 
-        <div class="contact-form-box">
-            <h2>Send Us a Message</h2>
-            <form>
-                <div class="form-group">
-                    <label>Full Name</label>
-                    <input type="text" placeholder="Your full name">
-                </div>
-                <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" placeholder="your@email.com">
-                </div>
-                <div class="form-group">
-                    <label>Comment</label>
-                    <textarea rows="5" placeholder="Write your message here..."></textarea>
-                </div>
-                <input type="submit" value="Send Message" class="btn">
-            </form>
+        <a class="btn" href="service.html">See all services</a>
+      </div>
+    </section>
+
+    <!-- Visit us -->
+    <section id="visit" class="section">
+      <div class="container visit">
+        <div class="visit-info">
+          <h2 class="section-title">Visit us</h2>
+
+          <p class="visit-label">Opening hours</p>
+          <p class="visit-value">Monday to Sunday: 2:00 AM - 3:00 PM</p>
+
+          <p class="visit-label">Address</p>
+          <p class="visit-value">Kombolcha Piyasa, Kombolcha, Ethiopia</p>
+
+          <p class="visit-label">Phone</p>
+          <p class="visit-value">093-556-0931</p>
+
+          <p class="visit-label">Email</p>
+          <p class="visit-value">info@mayacafe.com</p>
+
+          <a class="btn btn-dark" href="maps.html">Open the map</a>
         </div>
 
-    </div>
-</section>
-
-<footer class="footer">
-    <div class="footer-top">
-
-        <div class="footer-brand">
-            <div class="footer-logo">
-                <span>☕</span>
-                <span class="footer-logo-text">Fikir <span class="footer-cafe-text">Cafe</span></span>
-            </div>
-            <p>A warm place for great food, fresh coffee, and unforgettable moments. Family-owned since 2014.</p>
-            <div class="footer-socials">
-                <a href="#" title="Facebook">📘</a>
-                <a href="#" title="Instagram">📸</a>
-                <a href="#" title="Telegram">✈️</a>
-                <a href="#" title="Twitter">🐦</a>
-            </div>
+        <div class="visit-map">
+          <iframe class="visit-map-frame" title="Map showing Maya Cafe at Kombolcha Piyasa" src="https://maps.google.com/maps?q=Kombolcha%20Piyasa%2C%20Kombolcha%2C%20Ethiopia&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <a class="btn btn-dark visit-map-button" href="https://www.google.com/maps/place/Maya+Cafe/@11.0839184,39.7393108,685m/data=!3m2!1e3!4b1!4m7!3m6!1s0x16477755df976513:0x7911aa3dd064ce79!8m2!3d11.0839184!4d39.7393108!15sCgltYXlhIGNha2WSAQRjYWZl4AEA!16s%2Fg%2F11gmc64nbw?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Open Map</a>
         </div>
+      </div>
+    </section>
 
-        <div class="footer-links">
-            <h4>Quick Links</h4>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#menu">Our Menu</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#testimonial">Testimonials</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
+  </main>
 
-        <div class="footer-menu">
-            <h4>Popular Items</h4>
-            <ul>
-                <li>☕ Coffee — $4.00</li>
-                <li>🥤 Fresh Juice — $2.50</li>
-                <li>🍕 Pizza — $7.00</li>
-                <li>🍔 Burger — $6.50</li>
-                <li>🍰 Dessert — $3.00</li>
-            </ul>
-        </div>
+  <footer class="footer">
+  <div class="container">
 
-        <div class="footer-contact">
-            <h4>Find Us</h4>
-            <p>📍 Kombolcha, Ethiopia</p>
-            <p>📞 0987654321</p>
-            <p>✈️ @FikirCafe</p>
-            <p>🕐 Mon – Sun: 7AM – 10PM</p>
-        </div>
+    <div class="footer-grid">
+
+      <!-- About -->
+      <div>
+        <p class="footer-brand">Maya Cafe</p>
+        <p class="footer-text">Fresh coffee, good food and a warm place to sit.</p>
+        <p class="footer-text"><a href="contact.html">Get in touch with us</a></p>
+      </div>
+
+      <!-- Links -->
+      <nav aria-label="Footer">
+        <h2 class="footer-title">Explore</h2>
+        <ul class="footer-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="maps.html">Maps</a></li>
+          <li><a href="gallary.html">Gallery</a></li>
+          <li><a href="service.html">Services</a></li>
+        </ul>
+      </nav>
+
+      <!-- Opening hours -->
+      <div>
+        <h2 class="footer-title">Opening hours</h2>
+        <dl class="hours">
+          <div><dt>Monday to Sunday</dt><dd>2:00 AM - 3:00 PM</dd></div>
+        </dl>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h2 class="footer-title">Contact</h2>
+        <ul class="footer-list contact">
+          <li>kombolcha piyasa </li>
+          <li>0935560931</li>
+          <li>info@mayacafe.com</li>
+        </ul>
+      </div>
 
     </div>
 
     <div class="footer-bottom">
-        <p>© 2026 Fikir Cafe. All rights reserved.</p>
+      <p>&copy; <span id="year">2026</span> Maya Cafe. All rights reserved.</p>
+      <button type="button" id="back-to-top" class="to-top">
+        Back to top
+        <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 16V4M4 10l6-6 6 6"/></svg>
+      </button>
     </div>
+
+  </div>
 </footer>
 
-<script src="app.js"></script>
+  <!-- Menu item details -->
+  <div id="modal" class="modal" hidden>
+    <button type="button" id="modal-backdrop" class="modal-backdrop" tabindex="-1" aria-label="Close item details"></button>
+    <div id="modal-box" class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-head">
+        <h2 id="modal-title" class="modal-title"></h2>
+        <button type="button" id="modal-close" class="close-btn" aria-label="Close">
+          <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15"/></svg>
+        </button>
+      </div>
+      <div class="item-details">
+        <img id="modal-image" class="item-detail-image" alt="" hidden>
+        <p id="modal-category" class="item-category"></p>
+        <p id="modal-price" class="item-price"></p>
+        <p id="modal-description" class="item-desc"></p>
+        <p id="modal-status" class="item-status" hidden>Not available today</p>
+        <a id="modal-order" class="btn btn-dark" href="tel:+251911234567">Order Now</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/nav.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
