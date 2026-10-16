@@ -581,10 +581,12 @@
 @media (max-width: 900px) {
   .hero {
     min-height: 500px;
+    background: 
+      linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.88) 100%),
+      url('https://images.unsplash.com/photo-1513104890138-7c749659a591?w=1600&q=80') center/cover no-repeat;
   }
   .hero::before {
-    right: 0;
-    border-radius: 0;
+    display: none;
   }
   .hero-inner {
     grid-template-columns: 1fr;
