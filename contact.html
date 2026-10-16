@@ -5,9 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Contact Maya Cafe in Kombolcha, Ethiopia.">
   <title>Contact-Maya Cafe</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/footer.css">
@@ -16,7 +13,7 @@
 <body>
   <header class="site-header" id="site-header">
     <div class="header-inner">
-      <a class="brand" href="index.html" aria-label="Maya Cafe home"><span class="brand-name">Maya Cafe</span></a>
+      <a class="brand" href="index.html" aria-label="Maya Cafe home"><img class="brand-logo" src="image/image1.png" alt="Maya Cafe"></a>
       <button type="button" id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
       <div id="site-menu" class="site-menu">
         <nav class="site-nav" aria-label="Main"><ul>
@@ -31,17 +28,96 @@
   <main class="content">
     <h1>Come say hello</h1>
     <p>Questions, feedback, or planning a visit? We would love to hear from you.</p>
+    
     <div class="contact-details">
-      <section><h2>Visit</h2><p>Kombolcha Piyasa<br>Kombolcha, Ethiopia</p><a href="maps.html">Get directions</a></section>
-      <section><h2>Call</h2><p><a href="tel:+251935560931">093-556-0931</a></p></section>
-      <section><h2>Email</h2><p><a href="mailto:info@mayacafe.com">info@mayacafe.com</a></p></section>
+      <section>
+        <h2>Visit Us</h2>
+        <p>Kombolcha Piyasa<br>Kombolcha, Ethiopia</p>
+        <a href="maps.html" class="btn btn-dark">Get Directions</a>
+      </section>
+      <section>
+        <h2>Call Us</h2>
+        <p><a href="tel:+251935560931">093-556-0931</a></p>
+        <p class="contact-note">Available daily: 2:00 AM - 3:00 PM</p>
+      </section>
+      <section>
+        <h2>Email Us</h2>
+        <p><a href="mailto:info@mayacafe.com">info@mayacafe.com</a></p>
+        <p class="contact-note">We respond within 24 hours</p>
+      </section>
     </div>
+
+    <h2>Send us a message</h2>
+    <form class="contact-form" id="contact-form">
+      <div class="field">
+        <label for="contact-name">Name <span class="required">*</span></label>
+        <input type="text" id="contact-name" name="name" required>
+      </div>
+      <div class="field">
+        <label for="contact-email">Email <span class="required">*</span></label>
+        <input type="email" id="contact-email" name="email" required>
+      </div>
+      <div class="field">
+        <label for="contact-phone">Phone</label>
+        <input type="tel" id="contact-phone" name="phone">
+      </div>
+      <div class="field">
+        <label for="contact-message">Message <span class="required">*</span></label>
+        <textarea id="contact-message" name="message" rows="5" required></textarea>
+      </div>
+      <p class="form-message" id="contact-form-message"></p>
+      <button type="submit" class="btn btn-brand">Send message</button>
+    </form>
+
     <h2>Opening hours</h2>
     <dl class="hours hours-light">
       <div><dt>Monday to Sunday</dt><dd>2:00 AM - 3:00 PM</dd></div>
     </dl>
   </main>
-  <footer class="footer"><div class="container footer-bottom"><p>&copy; <span id="year"></span> Maya Cafe. All rights reserved.</p><button type="button" id="back-to-top" class="to-top">Back to top</button></div></footer>
+  <footer class="footer"><div class="container"><div class="footer-grid"><div><p class="footer-brand">Maya Cafe</p><p class="footer-text">Delicious food, happy moments.</p></div><nav aria-label="Footer navigation"><h2 class="footer-title">Explore</h2><ul class="footer-list"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="maps.html">Maps</a></li><li><a href="gallary.html">Gallery</a></li><li><a href="service.html">Services</a></li></ul></nav><div><h2 class="footer-title">Visit us</h2><ul class="footer-list contact"><li>Kombolcha Piyasa, Kombolcha, Ethiopia</li><li><a href="tel:+251935560931">093-556-0931</a></li><li><a href="mailto:info@mayacafe.com">info@mayacafe.com</a></li></ul></div><div><h2 class="footer-title">Opening hours</h2><dl class="hours"><div><dt>Monday to Sunday</dt><dd>2:00 AM - 3:00 PM</dd></div></dl></div></div><div class="footer-bottom"><p>&copy; <span id="year"></span> Maya Cafe. All rights reserved.</p><button type="button" id="back-to-top" class="to-top">Back to top</button></div></div></footer>
   <script src="js/nav.js"></script>
+  <script>
+    // Contact form validation and handling
+    const contactForm = document.getElementById('contact-form');
+    const formMessage = document.getElementById('contact-form-message');
+
+    contactForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      
+      // Get form values
+      const name = document.getElementById('contact-name').value.trim();
+      const email = document.getElementById('contact-email').value.trim();
+      const phone = document.getElementById('contact-phone').value.trim();
+      const message = document.getElementById('contact-message').value.trim();
+      
+      // Validate
+      if (!name || !email || !message) {
+        formMessage.textContent = 'Please fill in all required fields.';
+        formMessage.className = 'form-message error';
+        return;
+      }
+      
+      // Email validation
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(email)) {
+        formMessage.textContent = 'Please enter a valid email address.';
+        formMessage.className = 'form-message error';
+        return;
+      }
+      
+      // Show success message
+      formMessage.textContent = 'Thank you for your message! We will get back to you soon. You can also call us at 093-556-0931.';
+      formMessage.className = 'form-message success';
+      
+      // Reset form
+      contactForm.reset();
+      
+      // Clear message after 5 seconds
+      setTimeout(function() {
+        formMessage.textContent = '';
+        formMessage.className = 'form-message';
+      }, 5000);
+    });
+  </script>
 </body>
 </html>

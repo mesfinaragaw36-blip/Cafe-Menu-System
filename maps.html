@@ -5,9 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Find Maya Cafe at Kombolcha Piyasa in Kombolcha, Ethiopia.">
   <title>Find us - Maya Cafe</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/footer.css">
@@ -16,7 +13,7 @@
 <body>
   <header class="site-header" id="site-header">
     <div class="header-inner">
-      <a class="brand" href="index.html" aria-label="Maya Cafe home"><span class="brand-name">Maya Cafe</span></a>
+      <a class="brand" href="index.html" aria-label="Maya Cafe home"><img class="brand-logo" src="image/image1.png" alt="Maya Cafe"></a>
       <button type="button" id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
       <div id="site-menu" class="site-menu">
         <nav class="site-nav" aria-label="Main"><ul>
@@ -31,13 +28,57 @@
   <main class="content">
     <h1>Find Maya Cafe</h1>
     <p>We are at Kombolcha Piyasa, Kombolcha, Ethiopia. We look forward to seeing you.</p>
+    
+    <div class="location-info">
+      <div class="location-detail">
+        <div class="location-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+        </div>
+        <div>
+          <h3>Location</h3>
+          <p>Kombolcha Piyasa<br>Kombolcha, Ethiopia</p>
+        </div>
+      </div>
+      
+      <div class="location-detail">
+        <div class="location-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <div>
+          <h3>Opening Hours</h3>
+          <p>Monday to Sunday<br>2:00 AM - 3:00 PM</p>
+        </div>
+      </div>
+      
+      <div class="location-detail">
+        <div class="location-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <p><a href="tel:+251935560931">093-556-0931</a></p>
+        </div>
+      </div>
+    </div>
+    
     <div class="map-embed">
       <iframe title="Map showing Kombolcha Piyasa, Kombolcha" src="https://maps.google.com/maps?q=Kombolcha%20Piyasa%2C%20Kombolcha%2C%20Ethiopia&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
-    <p><a class="btn btn-dark" href="https://www.google.com/maps/place/Maya+Cafe/@11.0839184,39.7393108,685m/data=!3m2!1e3!4b1!4m7!3m6!1s0x16477755df976513:0x7911aa3dd064ce79!8m2!3d11.0839184!4d39.7393108!15sCgltYXlhIGNha2WSAQRjYWZl4AEA!16s%2Fg%2F11gmc64nbw?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Open directions in Google Maps</a></p>
-    <p>Prefer to call first? <a href="tel:+251935560931">093-556-0931</a></p>
+    
+    <div class="map-actions">
+      <a class="btn btn-brand btn-lg" href="https://www.google.com/maps/place/Maya+Cafe/@11.0839184,39.7393108,685m/data=!3m2!1e3!4b1!4m7!3m6!1s0x16477755df976513:0x7911aa3dd064ce79!8m2!3d11.0839184!4d39.7393108!15sCgltYXlhIGNha2WSAQRjYWZl4AEA!16s%2Fg%2F11gmc64nbw?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
+      <a class="btn btn-dark btn-lg" href="contact.html">Contact us</a>
+    </div>
   </main>
-  <footer class="footer"><div class="container footer-bottom"><p>&copy; <span id="year"></span> Maya Cafe. All rights reserved.</p><button type="button" id="back-to-top" class="to-top">Back to top</button></div></footer>
+  <footer class="footer"><div class="container"><div class="footer-grid"><div><p class="footer-brand">Maya Cafe</p><p class="footer-text">Delicious food, happy moments.</p></div><nav aria-label="Footer navigation"><h2 class="footer-title">Explore</h2><ul class="footer-list"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="maps.html">Maps</a></li><li><a href="gallary.html">Gallery</a></li><li><a href="service.html">Services</a></li></ul></nav><div><h2 class="footer-title">Visit us</h2><ul class="footer-list contact"><li>Kombolcha Piyasa, Kombolcha, Ethiopia</li><li><a href="tel:+251935560931">093-556-0931</a></li><li><a href="mailto:info@mayacafe.com">info@mayacafe.com</a></li></ul></div><div><h2 class="footer-title">Opening hours</h2><dl class="hours"><div><dt>Monday to Sunday</dt><dd>2:00 AM - 3:00 PM</dd></div></dl></div></div><div class="footer-bottom"><p>&copy; <span id="year"></span> Maya Cafe. All rights reserved.</p><button type="button" id="back-to-top" class="to-top">Back to top</button></div></div></footer>
   <script src="js/nav.js"></script>
 </body>
 </html>

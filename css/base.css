@@ -1,39 +1,46 @@
 /* base.css: colors, fonts, reset and parts shared by every page */
 
 :root {
-  --paper:     #F3F6F1;
-  --mint:      #DCE6DD;
-  --header-bg: #0B1F17;
-  --cherry:    #B3263A;
-  --saffron:   #E8B31C;
-  --ink:       #1B1F1D;
-  --muted:     #4A554E;
-  --line:      #C9D3CB;
+  --paper: #f3f3f1;
+  --surface: #ffffff;
+  --header-bg: #18191a;
+  --header-soft: #2a2b2d;
+  --ink: #1b1d20;
+  --muted: #4d5054;
+  --muted-soft: #7a7d80;
+  --line: #e5e5e2;
+  --neutral: #e9e9e7;
+  --neutral-strong: #dfe0dd;
+  --shadow: rgba(0, 0, 0, 0.08);
+  --accent: #dfe1df;
+  --brand-accent: #5BA548;
+  --brand-hover: #4a8c3a;
 
-  --font-display: "Bricolage Grotesque", "Noto Sans Ethiopic", system-ui, sans-serif;
-  --font-body:    "Figtree", "Noto Sans Ethiopic", system-ui, sans-serif;
+  --font-display: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
 
-/* Makes the HTML "hidden" attribute always win over our display rules. */
 [hidden] { display: none !important; }
 
 html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  background: var(--paper);
+  background: #f9f9f7;
   color: var(--ink);
   font-family: var(--font-body);
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 img { max-width: 100%; }
 
-/* Keyboard focus ring (header, footer and dark bands switch it to yellow) */
-:focus-visible { outline: 3px solid var(--muted); outline-offset: 2px; }
+:focus-visible {
+  outline: 3px solid var(--muted);
+  outline-offset: 2px;
+}
 
 .visually-hidden {
   position: absolute;
@@ -44,7 +51,6 @@ img { max-width: 100%; }
   white-space: nowrap;
 }
 
-/* Page width */
 .container {
   max-width: 65rem;
   margin: 0 auto;
@@ -52,56 +58,96 @@ img { max-width: 100%; }
   padding-right: 1.25rem;
 }
 
-/* ---- Buttons ---- */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 3rem;
+  min-height: 3rem;
   padding: 0 1.5rem;
   font: inherit;
   font-weight: 600;
-  color: var(--ink);
-  background: var(--saffron);
-  border: 0;
-  border-radius: 0.5rem;
+  color: #fff;
+  background: var(--brand-accent);
+  border: 1px solid var(--brand-accent);
+  border-radius: 0.625rem;
   text-decoration: none;
   cursor: pointer;
-  transition: background-color 0.15s ease, color 0.15s ease;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
 }
-.btn:hover { background: #F0C13F; }
+.btn:hover {
+  background: var(--brand-hover);
+  border-color: var(--brand-hover);
+  transform: translateY(-1px);
+}
 .btn:focus-visible {
-  outline: 3px solid var(--ink);
+  outline: 3px solid var(--brand-accent);
   outline-offset: 2px;
   box-shadow: 0 0 0 2px #fff;
 }
-.btn-lg { height: 3.25rem; padding: 0 1.75rem; font-size: 1.05rem; }
-.btn-dark { color: #fff; background: var(--muted); }
-.btn-dark:hover { background: #353D39; }
+.btn-lg { min-height: 3.25rem; padding: 0 1.75rem; font-size: 1.05rem; }
+.btn-dark { 
+  color: #fff; 
+  background: var(--brand-accent); 
+  border-color: var(--brand-accent); 
+}
+.btn-dark:hover { 
+  background: var(--brand-hover); 
+  border-color: var(--brand-hover); 
+}
+.btn-brand {
+  color: #fff;
+  background: var(--brand-accent);
+  border-color: var(--brand-accent);
+}
+.btn-brand:hover { 
+  color: #fff; 
+  background: var(--brand-hover); 
+  border-color: var(--brand-hover); 
+}
 .btn-line {
-  color: var(--muted);
-  background: transparent;
-  border: 1.5px solid var(--muted);
+  color: #fff;
+  background: var(--brand-accent);
+  border: 1.5px solid var(--brand-accent);
 }
-.btn-line:hover { color: #fff; background: var(--muted); }
-
-/* ---- Headings shared by several pages ---- */
-.section { padding: 4rem 0 2rem; }
-.section-title {
-  margin: 0 0 0.5rem;
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: clamp(2rem, 6vw, 2.5rem);
-  color: var(--muted);
+.btn-line:hover { 
+  background: var(--brand-hover); 
+  border-color: var(--brand-hover); 
 }
-.section-lead { margin: 0 0 1.5rem; font-size: 1.15rem; color: var(--muted); }
 
-.page-title {
-  margin: 0 0 1rem;
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 1.8rem;
-  color: var(--muted);
+.btn-small {
+  min-height: 2.35rem;
+  padding: 0 0.9rem;
+  font-size: 0.88rem;
+}
+
+.section { padding: 4.5rem 0 2.5rem; }
+.section-title,
+.page-title,
+.content h1,
+.content h2 {
+  margin: 0 0 0.75rem;
+  font-family: 'Georgia', 'Garamond', 'Times New Roman', serif;
+  font-weight: 600;
+  font-size: clamp(1.5rem, 3.5vw, 1.85rem);
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  text-align: center;
+}
+.section-lead { 
+  margin: 0 0 1.5rem; 
+  font-size: 1rem; 
+  color: var(--muted); 
+  text-align: center;
+}
+
+/* Menu section specific styling */
+#menu .section-title {
+  text-align: center;
+}
+
+#menu .section-lead {
+  text-align: center;
 }
 
 @media (prefers-reduced-motion: reduce) {

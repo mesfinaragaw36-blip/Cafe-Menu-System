@@ -4,22 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Maya Cafe</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/home.css">
 </head>
-<body>
+<body class="home-page">
 
   <header class="site-header" id="site-header">
     <div class="header-inner">
 
       <a class="brand" href="index.html" aria-label="Maya Cafe home">
-        <span class="brand-name">Maya Cafe</span>
+        <img class="brand-logo" id="logo" src="image/image1.png" alt="Maya Cafe">
       </a>
 
       <button type="button" id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
@@ -51,27 +47,18 @@
 
   <main>
 
-    <!-- Hero -->
     <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-copy">
-          <h1 class="hero-title">Welcome to Maya Cafe</h1>
-          <p class="hero-text">Fresh coffee, good food and a warm place to sit. Look through today's menu, or come and visit us.</p>
-          <div class="hero-buttons">
-            <a class="btn btn-dark btn-lg" href="#menu">See the menu</a>
-            <a class="btn btn-line btn-lg" href="#visit">Visit us</a>
-          </div>
+      <div class="hero-inner">
+        <div class="hero-content">
+          <div class="hero-badge">ALL YOUR FAVORITES</div>
+          <h1 class="hero-title-main">Delicious</h1>
+          <p class="hero-subtitle">Food & More</p>
+          <p class="hero-description">Enjoy tasty burgers, fresh pizza, sweet cakes, and delicious meals at Maya Cafe in Kombolcha.</p>
+          <a class="btn btn-hero" href="#menu">Order Now</a>
         </div>
-
-        <svg class="hero-art" width="400" height="400" viewBox="0 0 420 420" role="img" aria-label="A coffee cup with steam">
-          <circle cx="210" cy="210" r="190" fill="#E8B31C"/>
-          <circle cx="338" cy="84" r="52" fill="#B3263A"/>
-          <circle cx="78" cy="338" r="38" fill="#4A554E"/>
-          <path d="M168 150c-14-16 14-30 0-50M210 150c-14-16 14-30 0-50M252 150c-14-16 14-30 0-50" fill="none" stroke="#4A554E" stroke-width="10" stroke-linecap="round"/>
-          <rect x="130" y="172" width="150" height="118" rx="26" fill="#4A554E"/>
-          <path d="M278 198h16a28 28 0 0 1 0 56h-16" fill="none" stroke="#4A554E" stroke-width="16" stroke-linecap="round"/>
-          <ellipse cx="205" cy="306" rx="110" ry="14" fill="#4A554E"/>
-        </svg>
+        <div class="hero-image">
+          <img src="image/burger1.jpg" alt="Delicious burger, pizza and cake at Maya Cafe" class="hero-food-img">
+        </div>
       </div>
     </section>
 
@@ -109,24 +96,24 @@
             <div class="offer-icon">
               <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 9h11v5a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4V9zM16 10h1.5a2.5 2.5 0 0 1 0 5H16M8 3v3M12 3v3"/></svg>
             </div>
-            <h3 class="offer-title">Fresh coffee</h3>
-            <p class="offer-text">Coffee and espresso drinks, made to order.</p>
+            <h3 class="offer-title">Hot & Cold Drinks</h3>
+            <p class="offer-text">Enjoy a variety of beverages including traditional Ethiopian coffee, fresh juices, and refreshing drinks prepared to order.</p>
           </div>
 
           <div class="offer">
             <div class="offer-icon">
               <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3v7a2 2 0 0 0 2 2v9M10 3v7M8 3v7M17 3c-2 2-2 6 0 8v10"/></svg>
             </div>
-            <h3 class="offer-title">Breakfast and lunch</h3>
-            <p class="offer-text">Traditional and international dishes, served through the day.</p>
+            <h3 class="offer-title">Breakfast & Lunch</h3>
+            <p class="offer-text">Traditional and international dishes served throughout the day. Fresh ingredients and comforting flavors.</p>
           </div>
 
           <div class="offer">
             <div class="offer-icon">
               <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8zM9 8V6a3 3 0 0 1 6 0v2"/></svg>
             </div>
-            <h3 class="offer-title">Takeaway</h3>
-            <p class="offer-text">Order at the counter and take it with you.</p>
+            <h3 class="offer-title">Takeaway Service</h3>
+            <p class="offer-text">Order at the counter and take your favorite meal or drink with you. All items available for convenient takeaway.</p>
           </div>
         </div>
 
@@ -152,7 +139,7 @@
           <p class="visit-label">Email</p>
           <p class="visit-value">info@mayacafe.com</p>
 
-          <a class="btn btn-dark" href="maps.html">Open the map</a>
+          <!-- <a class="btn btn-dark" href="maps.html">Open the map</a> -->
         </div>
 
         <div class="visit-map">
@@ -165,60 +152,42 @@
   </main>
 
   <footer class="footer">
-  <div class="container">
-
-    <div class="footer-grid">
-
-      <!-- About -->
-      <div>
-        <p class="footer-brand">Maya Cafe</p>
-        <p class="footer-text">Fresh coffee, good food and a warm place to sit.</p>
-        <p class="footer-text"><a href="contact.html">Get in touch with us</a></p>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-brand">Maya Cafe</p>
+          <p class="footer-text">Delicious food, happy moments.</p>
+        </div>
+        <nav aria-label="Footer navigation">
+          <h2 class="footer-title">Explore</h2>
+          <ul class="footer-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="maps.html">Maps</a></li>
+            <li><a href="gallary.html">Gallery</a></li>
+            <li><a href="service.html">Services</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2 class="footer-title">Visit us</h2>
+          <ul class="footer-list contact">
+            <li>Kombolcha Piyasa, Kombolcha, Ethiopia</li>
+            <li><a href="tel:+251935560931">093-556-0931</a></li>
+            <li><a href="mailto:info@mayacafe.com">info@mayacafe.com</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-title">Opening hours</h2>
+          <dl class="hours"><div><dt>Monday to Sunday</dt><dd>2:00 AM - 3:00 PM</dd></div></dl>
+        </div>
       </div>
-
-      <!-- Links -->
-      <nav aria-label="Footer">
-        <h2 class="footer-title">Explore</h2>
-        <ul class="footer-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="maps.html">Maps</a></li>
-          <li><a href="gallary.html">Gallery</a></li>
-          <li><a href="service.html">Services</a></li>
-        </ul>
-      </nav>
-
-      <!-- Opening hours -->
-      <div>
-        <h2 class="footer-title">Opening hours</h2>
-        <dl class="hours">
-          <div><dt>Monday to Sunday</dt><dd>2:00 AM - 3:00 PM</dd></div>
-        </dl>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Maya Cafe. All rights reserved.</p>
+        <button type="button" id="back-to-top" class="to-top">Back to top</button>
       </div>
-
-      <!-- Contact -->
-      <div>
-        <h2 class="footer-title">Contact</h2>
-        <ul class="footer-list contact">
-          <li>kombolcha piyasa </li>
-          <li>0935560931</li>
-          <li>info@mayacafe.com</li>
-        </ul>
-      </div>
-
     </div>
-
-    <div class="footer-bottom">
-      <p>&copy; <span id="year">2026</span> Maya Cafe. All rights reserved.</p>
-      <button type="button" id="back-to-top" class="to-top">
-        Back to top
-        <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 16V4M4 10l6-6 6 6"/></svg>
-      </button>
-    </div>
-
-  </div>
-</footer>
+  </footer>
 
   <!-- Menu item details -->
   <div id="modal" class="modal" hidden>
@@ -236,9 +205,41 @@
         <p id="modal-price" class="item-price"></p>
         <p id="modal-description" class="item-desc"></p>
         <p id="modal-status" class="item-status" hidden>Not available today</p>
-        <a id="modal-order" class="btn btn-dark" href="tel:+251911234567">Order Now</a>
+        <button id="modal-add" class="btn btn-dark" type="button">Add to cart</button>
       </div>
     </div>
+  </div>
+
+  <div id="cart-modal" class="modal cart-modal" hidden>
+    <button type="button" id="cart-modal-backdrop" class="modal-backdrop" tabindex="-1" aria-label="Close order options"></button>
+    <section id="cart-modal-box" class="cart-modal-box" role="dialog" aria-modal="true" aria-labelledby="cart-modal-title">
+      <div class="modal-head">
+        <div>
+          <p class="cart-modal-kicker">Maya Cafe order</p>
+          <h2 id="cart-modal-title" class="modal-title"></h2>
+        </div>
+        <button type="button" id="cart-modal-close" class="close-btn" aria-label="Close">
+          <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l10 10M15 5 5 15"/></svg>
+        </button>
+      </div>
+      <div class="cart-modal-content">
+        <p id="cart-modal-description" class="cart-modal-description"></p>
+        <div class="cart-modal-price-row"><span>Price per item</span><strong id="cart-modal-price"></strong></div>
+        <div class="cart-quantity-row">
+          <span>Quantity</span>
+          <div class="quantity-control">
+            <button type="button" id="quantity-decrease" aria-label="Decrease quantity">−</button>
+            <output id="quantity-value" aria-live="polite">1</output>
+            <button type="button" id="quantity-increase" aria-label="Increase quantity">+</button>
+          </div>
+        </div>
+        <div class="cart-modal-total"><span>Total</span><strong id="cart-modal-total"></strong></div>
+      </div>
+      <div class="cart-modal-footer">
+        <a id="cart-order-now" class="btn btn-brand" href="tel:+251935560931">Order now</a>
+        <p>Call Maya Cafe at <a href="tel:+251935560931">093-556-0931</a> to confirm your order.</p>
+      </div>
+    </section>
   </div>
 
   <script src="js/nav.js"></script>

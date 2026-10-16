@@ -1,13 +1,17 @@
 /* header.css: the static header (it scrolls away with the page) */
 
 .site-header {
-  position: relative;
-  z-index: 40;
-  background: var(--header-bg);
-  color: #fff;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.96);
+  color: var(--ink);
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.035);
 }
-.site-header :focus-visible { outline-color: var(--saffron); }
+.site-header :focus-visible { outline-color: var(--brand-accent); }
 
 .header-inner {
   position: relative;
@@ -25,10 +29,17 @@
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  color: #fff;
+  color: var(--ink);
   text-decoration: none;
 }
-.brand-logo { display: block; height: 2.25rem; width: auto; }
+.brand-logo {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+  border-radius: 50%;
+}
+.brand:focus-visible { border-radius: 0.5rem; }
 .brand-name {
   font-family: var(--font-display);
   font-weight: 800;
@@ -36,7 +47,7 @@
   letter-spacing: -0.02em;
   transition: color 0.15s ease;
 }
-.brand:hover .brand-name { color: var(--saffron); }
+.brand:hover .brand-name { color: var(--accent); }
 
 /* ---- Menu wrapper: links on the left, buttons on the right ---- */
 .site-menu {
@@ -60,7 +71,7 @@
   align-items: center;
   min-height: 2.75rem;
   padding: 0 0.8rem;
-  color: #fff;
+  color: var(--ink);
   font-weight: 600;
   text-decoration: none;
   transition: color 0.15s ease;
@@ -72,13 +83,13 @@
   right: 0.8rem;
   bottom: 0.4rem;
   height: 2px;
-  background: var(--saffron);
+  background: var(--brand-accent);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.2s ease;
 }
 .site-nav a:hover,
-.site-nav a[aria-current="page"] { color: var(--saffron); }
+.site-nav a[aria-current="page"] { color: var(--brand-accent); }
 .site-nav a:hover::after,
 .site-nav a[aria-current="page"]::after { transform: scaleX(1); }
 
@@ -105,17 +116,17 @@
   transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
 .btn-outline {
-  color: #fff;
+  color: var(--ink);
   background: transparent;
-  border: 1.5px solid rgba(255, 255, 255, 0.55);
+  border: 1.5px solid var(--line);
 }
-.btn-outline:hover { color: var(--saffron); border-color: var(--saffron); }
+.btn-outline:hover { color: var(--brand-accent); border-color: var(--brand-accent); }
 .btn-solid {
-  color: var(--muted);
-  background: var(--saffron);
-  border: 1.5px solid var(--saffron);
+  color: #fff;
+  background: var(--brand-accent);
+  border: 1.5px solid var(--brand-accent);
 }
-.btn-solid:hover { background: #F0C13F; border-color: #F0C13F; }
+.btn-solid:hover { background: #aa1e2a; border-color: #aa1e2a; }
 
 .user-name {
   max-width: 10rem;
@@ -135,7 +146,7 @@
   justify-content: center;
   gap: 5px;
   background: transparent;
-  border: 1.5px solid rgba(255, 255, 255, 0.55);
+  border: 1.5px solid var(--line);
   border-radius: 0.5rem;
   cursor: pointer;
 }
@@ -143,7 +154,7 @@
   display: block;
   width: 20px;
   height: 2px;
-  background: #fff;
+  background: var(--ink);
   border-radius: 2px;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
@@ -164,8 +175,8 @@
     align-items: stretch;
     gap: 1rem;
     padding: 0.5rem 1.25rem 1.25rem;
-    background: var(--header-bg);
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    background: #fff;
+    border-top: 1px solid var(--line);
     box-shadow: 0 16px 24px rgba(0, 0, 0, 0.3);
   }
   .site-menu.open { display: flex; }

@@ -4,9 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Login-Maya Cafe</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/footer.css">
@@ -16,7 +13,7 @@
 
   <header class="site-header" id="site-header">
     <div class="header-inner">
-      <a class="brand" href="index.html" aria-label="Maya Cafe home"><span class="brand-name">Maya Cafe</span></a>
+      <a class="brand" href="index.html" aria-label="Maya Cafe home"><img class="brand-logo" src="image/image1.png" alt="Maya Cafe"></a>
       <button type="button" id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
         <span class="bar"></span><span class="bar"></span><span class="bar"></span>
       </button>
@@ -34,8 +31,15 @@
     </div>
   </header>
 
-  <main class="form-card">
-    <h1 style="text-align: center;">Welcome back</h1>
+  <main class="auth-main">
+    <aside class="auth-visual">
+      <div>
+        <h2>Welcome back</h2>
+        <p>Delicious food and a warm welcome are waiting at Maya Cafe.</p>
+      </div>
+    </aside>
+    <section class="form-card">
+    <h1>Welcome back</h1>
 
     <form id="login-form" class="form">
       <div class="field">
@@ -53,9 +57,10 @@
 
     <!-- <p class="form-note">Demo only: accounts stay in this browser and passwords are not protected. Do not use a real password.</p> -->
     <p class="form-note">No account yet? <a href="register.html">Register</a></p>
+    </section>
   </main>
 
-  <footer class="footer"><div class="container footer-bottom"><p>&copy; <span id="year"></span> Maya Cafe. All rights reserved.</p><button type="button" id="back-to-top" class="to-top">Back to top</button></div></footer>
+  <footer class="footer"><div class="container"><div class="footer-grid"><div><p class="footer-brand">Maya Cafe</p><p class="footer-text">Delicious food, happy moments.</p></div><nav aria-label="Footer navigation"><h2 class="footer-title">Explore</h2><ul class="footer-list"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="maps.html">Maps</a></li><li><a href="gallary.html">Gallery</a></li><li><a href="service.html">Services</a></li></ul></nav><div><h2 class="footer-title">Visit us</h2><ul class="footer-list contact"><li>Kombolcha Piyasa, Kombolcha, Ethiopia</li><li><a href="tel:+251935560931">093-556-0931</a></li><li><a href="mailto:info@mayacafe.com">info@mayacafe.com</a></li></ul></div><div><h2 class="footer-title">Opening hours</h2><dl class="hours"><div><dt>Monday to Sunday</dt><dd>2:00 AM - 3:00 PM</dd></div></dl></div></div><div class="footer-bottom"><p>&copy; <span id="year"></span> Maya Cafe. All rights reserved.</p><button type="button" id="back-to-top" class="to-top">Back to top</button></div></div></footer>
 
   <script src="js/nav.js"></script>
   <script src="js/auth.js"></script>
