@@ -580,13 +580,14 @@
 
 @media (max-width: 900px) {
   .hero {
-    min-height: 500px;
+    min-height: 600px;
     background: 
-      linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.88) 100%),
       url('https://images.unsplash.com/photo-1513104890138-7c749659a591?w=1600&q=80') center/cover no-repeat;
+    background-size: 100% auto;
   }
   .hero::before {
-    display: none;
+    right: 0;
+    border-radius: 0;
   }
   .hero-inner {
     grid-template-columns: 1fr;
@@ -612,6 +613,12 @@
     font-size: 0.9rem;
   }
   .hero-image {
-    display: none;
+    display: flex;
+    margin-top: 1rem;
+  }
+  .hero-food-img {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
   }
 }
