@@ -31,10 +31,12 @@ const quantityDecreaseBtn = document.getElementById("quantity-decrease");
 const quantityIncreaseBtn = document.getElementById("quantity-increase");
 
 const DISH_ART = {
+  "Burgers": '<path d="M25 55c0-8 6-15 14-15h52c8 0 14 7 14 15v8H25v-8Z" fill="#e8b31c" stroke="#555" stroke-width="4"/><circle cx="65" cy="70" r="28" fill="#8b4513" stroke="#555" stroke-width="4"/><path d="M40 70h50" stroke="#c92836" stroke-width="3"/><circle cx="52" cy="75" r="3" fill="#fff"/><circle cx="65" cy="78" r="3" fill="#fff"/><circle cx="78" cy="75" r="3" fill="#fff"/><path d="M25 85c0 8 6 15 14 15h52c8 0 14-7 14-15H25Z" fill="#e8b31c" stroke="#555" stroke-width="4"/>',
+  "Pizza": '<circle cx="65" cy="65" r="48" fill="#f5f5f3" stroke="#555" stroke-width="4"/><circle cx="65" cy="65" r="34" fill="#deded9"/><path d="M38 64c10-20 19-26 28-25 7 14 8 29 3 42-13 4-24-2-31-17Z" fill="#8c938c"/><path d="M69 45c13-12 26-8 33 4-5 12-12 20-24 25-8-7-11-17-9-29Z" fill="#b6b9b5"/><circle cx="54" cy="51" r="6" fill="#c92836"/><circle cx="79" cy="66" r="5" fill="#c92836"/><path d="M31 31 18 19m82 12 13-12M30 98 17 111" stroke="#555" stroke-width="4" stroke-linecap="round"/>',
+  "Cakes and Desserts": '<path d="M28 82h74l-7 16H35l-7-16Z" fill="#bfc0bc" stroke="#555" stroke-width="4" stroke-linejoin="round"/><path d="m36 78 12-40h40l12 40H36Z" fill="#e6e4e0" stroke="#555" stroke-width="4" stroke-linejoin="round"/><path d="M49 38c0-10 9-18 19-18s19 8 19 18" fill="none" stroke="#777" stroke-width="5"/><path d="M43 57h50" stroke="#c92836" stroke-width="5"/><circle cx="68" cy="31" r="5" fill="#c92836"/>',
+  "Other Foods": '<rect x="25" y="45" width="80" height="50" rx="8" fill="#e4e3df" stroke="#555" stroke-width="4"/><path d="M30 60h70M30 75h70" stroke="#888" stroke-width="3"/><circle cx="50" cy="52" r="4" fill="#8c938c"/><circle cx="80" cy="68" r="5" fill="#c92836"/><circle cx="45" cy="83" r="4" fill="#b6b9b5"/>',
   "Hot Drinks": '<path d="M29 35h62v24a31 31 0 0 1-31 31 31 31 0 0 1-31-31V35Z" fill="#e4e3df" stroke="#555" stroke-width="4"/><path d="M91 43h9a18 18 0 0 1 0 36h-9" fill="none" stroke="#555" stroke-width="5"/><path d="M45 27c-5-7 5-10 0-17m19 17c-5-7 5-10 0-17m19 17c-5-7 5-10 0-17" fill="none" stroke="#777" stroke-width="4" stroke-linecap="round"/><path d="M23 98h80" stroke="#555" stroke-width="5" stroke-linecap="round"/>',
-  "Cold Drinks": '<path d="m35 31 12 69h36l12-69H35Z" fill="#e4e3df" stroke="#555" stroke-width="4" stroke-linejoin="round"/><path d="M41 62h48" stroke="#888" stroke-width="5"/><path d="m67 15-8 34m18-30-8 31" stroke="#555" stroke-width="4" stroke-linecap="round"/><circle cx="56" cy="73" r="7" fill="#c92836"/><circle cx="77" cy="83" r="6" fill="#b8b9b5"/>',
-  "Food": '<circle cx="65" cy="65" r="48" fill="#f5f5f3" stroke="#555" stroke-width="4"/><circle cx="65" cy="65" r="34" fill="#deded9"/><path d="M38 64c10-20 19-26 28-25 7 14 8 29 3 42-13 4-24-2-31-17Z" fill="#8c938c"/><path d="M69 45c13-12 26-8 33 4-5 12-12 20-24 25-8-7-11-17-9-29Z" fill="#b6b9b5"/><circle cx="54" cy="51" r="6" fill="#c92836"/><circle cx="79" cy="66" r="5" fill="#c92836"/><path d="M31 31 18 19m82 12 13-12M30 98 17 111" stroke="#555" stroke-width="4" stroke-linecap="round"/>',
-  "Desserts": '<path d="M28 82h74l-7 16H35l-7-16Z" fill="#bfc0bc" stroke="#555" stroke-width="4" stroke-linejoin="round"/><path d="m36 78 12-40h40l12 40H36Z" fill="#e6e4e0" stroke="#555" stroke-width="4" stroke-linejoin="round"/><path d="M49 38c0-10 9-18 19-18s19 8 19 18" fill="none" stroke="#777" stroke-width="5"/><path d="M43 57h50" stroke="#c92836" stroke-width="5"/><circle cx="68" cy="31" r="5" fill="#c92836"/>'
+  "Soft Drinks": '<path d="m35 31 12 69h36l12-69H35Z" fill="#e4e3df" stroke="#555" stroke-width="4" stroke-linejoin="round"/><path d="M41 62h48" stroke="#888" stroke-width="5"/><path d="m67 15-8 34m18-30-8 31" stroke="#555" stroke-width="4" stroke-linecap="round"/><circle cx="56" cy="73" r="7" fill="#c92836"/><circle cx="77" cy="83" r="6" fill="#b8b9b5"/>'
 };
 
 let lastTrigger = null;
@@ -180,9 +182,10 @@ function renderMenuLists() {
   menuListsEl.replaceChildren();
   CATEGORIES.forEach(category => {
     const section = el("section", "menu-list");
-    section.setAttribute("aria-labelledby", "menu-heading-" + category.name.toLowerCase().replace(/\s+/g, "-"));
+    section.id = category.id; // Add ID for smooth scrolling
+    section.setAttribute("aria-labelledby", "menu-heading-" + category.id);
     const heading = el("h3", "page-title", category.name);
-    heading.id = "menu-heading-" + category.name.toLowerCase().replace(/\s+/g, "-");
+    heading.id = "menu-heading-" + category.id;
     const cards = el("div", "menu-cards");
     section.append(heading, cards);
     renderMenuCards(itemsIn(category.name), cards, false);
@@ -267,3 +270,23 @@ searchEl.addEventListener("input", () => renderSearch(searchEl.value));
 
 renderMenuLists();
 updateCart();
+
+
+// Smooth scroll for category bar links
+document.querySelectorAll('.category-item').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const targetId = link.getAttribute('href').substring(1);
+    const targetSection = document.getElementById(targetId);
+    
+    if (targetSection) {
+      const headerHeight = document.getElementById('site-header')?.offsetHeight || 80;
+      const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+      
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
+    }
+  });
+});
